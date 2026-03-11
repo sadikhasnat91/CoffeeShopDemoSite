@@ -11,21 +11,21 @@ const specials = [
   {
     name: "Golden Espresso Martini",
     desc: "Our signature espresso blended with vanilla liqueur and gold leaf garnish",
-    price: "$14",
+    price: "৳420",
     image: baristaImg,
     tag: "Signature",
   },
   {
     name: "Rose Petal Latte",
     desc: "Delicate rose-infused milk with a double espresso base",
-    price: "$8",
+    price: "৳250",
     image: latteImg,
     tag: "Popular",
   },
   {
     name: "Dark Velvet Fondant",
     desc: "Molten chocolate cake with espresso ice cream and gold dust",
-    price: "$12",
+    price: "৳350",
     image: dessertImg,
     tag: "Chef's Pick",
   },
@@ -51,7 +51,7 @@ export default function SpecialsSection() {
 
   return (
     <section id="specials" className="section-padding relative">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4">
           Signature <span className="text-gold-gradient">Specials</span>
         </h2>
@@ -59,14 +59,14 @@ export default function SpecialsSection() {
           Limited edition creations by our master artisans
         </p>
 
-        <div ref={ref} className="grid md:grid-cols-3 gap-8">
+        <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {specials.map((item) => (
             <div
               key={item.name}
               className="special-card group cursor-pointer"
             >
               <div className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:glow-gold">
-                <div className="relative h-72 overflow-hidden">
+                <div className="relative h-56 sm:h-64 lg:h-72 overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.name}

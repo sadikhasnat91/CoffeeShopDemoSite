@@ -85,7 +85,7 @@ export default function HeroSection() {
       }} />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl">
+      <div className="relative z-10 text-center md:text-left px-6 sm:px-10 md:px-16 lg:px-24 max-w-5xl md:mr-auto">
         <div className="mb-6">
           <span className="inline-block px-4 py-1.5 rounded-full border border-primary/30 text-primary font-body text-xs tracking-[0.2em] uppercase">
             Est. 2014 · Artisan Coffee
@@ -94,7 +94,7 @@ export default function HeroSection() {
 
         <h1
           ref={headingRef}
-          className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.1] perspective-[1000px]"
+          className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold leading-[1.1] perspective-[1000px]"
         >
           {headingWords.map((word, i) => (
             <span
@@ -110,22 +110,22 @@ export default function HeroSection() {
 
         <p
           ref={taglineRef}
-          className="mt-8 text-lg md:text-xl text-foreground/50 font-body font-light max-w-lg mx-auto leading-relaxed opacity-0"
+          className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-foreground/50 font-body font-light max-w-lg mx-auto md:mx-0 leading-relaxed opacity-0"
         >
           Handcrafted beverages, artisanal flavors, and an atmosphere that transcends the ordinary.
         </p>
 
-        <div ref={btnRef} className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <div ref={btnRef} className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
           <a
             href="#menu"
-            className="group relative px-10 py-4 rounded-full bg-primary text-primary-foreground font-body font-medium text-sm tracking-wider uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/30"
+            className="group relative px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-primary text-primary-foreground font-body font-medium text-sm tracking-wider uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/30"
           >
             <span className="relative z-10">Explore Menu</span>
             <div className="absolute inset-0 bg-gold-light scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100" />
           </a>
           <a
             href="#contact"
-            className="group px-10 py-4 rounded-full border border-foreground/20 text-foreground/80 font-body font-medium text-sm tracking-wider uppercase transition-all duration-500 hover:border-primary hover:text-primary hover:bg-primary/5"
+            className="group px-8 sm:px-10 py-3.5 sm:py-4 rounded-full border border-foreground/20 text-foreground/80 font-body font-medium text-sm tracking-wider uppercase transition-all duration-500 hover:border-primary hover:text-primary hover:bg-primary/5"
           >
             Reserve a Table
           </a>
@@ -133,7 +133,7 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+      <div className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
         <span className="text-[10px] tracking-[0.3em] uppercase text-foreground/30 font-body">Scroll</span>
         <div className="w-px h-10 bg-gradient-to-b from-primary/60 to-transparent animate-pulse" />
       </div>

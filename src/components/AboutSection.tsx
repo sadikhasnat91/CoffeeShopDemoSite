@@ -61,7 +61,7 @@ export default function AboutSection() {
         ))}
       </div>
 
-      <div ref={ref} className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div ref={ref} className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 lg:gap-24 items-center">
         <div>
           <span className="about-anim block text-primary font-body text-sm tracking-[0.3em] uppercase mb-4">
             Our Heritage
@@ -71,7 +71,7 @@ export default function AboutSection() {
             <span className="text-gold-gradient">in Gold</span>
           </h2>
           <p className="about-anim text-foreground/60 font-body leading-relaxed mb-5 text-lg">
-            Born from a love of craft and culture, Aurum Café began as a vision to create more than just a coffee shop — a sanctuary where every sip tells a story, and every visit becomes a memory.
+            Born from a love of craft and culture, S&Z Cafe began as a vision to create more than just a coffee shop — a sanctuary where every sip tells a story, and every visit becomes a memory.
           </p>
           <p className="about-anim text-foreground/60 font-body leading-relaxed mb-8">
             We source our beans from the finest single-origin farms, roast them in small batches, and serve each cup with the precision of artisans. Our pastry chefs create daily using organic, locally-sourced ingredients.
@@ -97,12 +97,12 @@ export default function AboutSection() {
             <img
               src={beansImg}
               alt="Coffee beans being roasted"
-              className="w-full h-[500px] object-cover"
+              className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover"
               loading="lazy"
             />
           </div>
           {/* Floating card */}
-          <div className="absolute -bottom-6 -left-6 glass-card rounded-xl p-5 glow-gold">
+          <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 glass-card rounded-xl p-4 sm:p-5 glow-gold">
             <p className="font-display text-lg text-primary font-bold">Est. 2014</p>
             <p className="text-xs text-muted-foreground font-body mt-0.5">Crafting excellence, one cup at a time</p>
           </div>

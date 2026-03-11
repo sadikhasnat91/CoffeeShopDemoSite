@@ -3,13 +3,13 @@ import { Coffee, MapPin, Clock, Phone, Instagram, Facebook, Twitter } from "luci
 export default function Footer() {
   return (
     <footer id="contact" className="section-padding bg-secondary/20 border-t border-border/30">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-10 mb-12">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <Coffee className="w-6 h-6 text-primary" />
-              <span className="font-display text-xl font-bold text-gold-gradient">Aurum Café</span>
+              <span className="font-display text-xl font-bold text-gold-gradient">S&Z Cafe</span>
             </div>
             <p className="text-sm text-muted-foreground font-body leading-relaxed">
               Where every cup is a masterpiece and every moment feels golden.
@@ -73,7 +73,7 @@ export default function Footer() {
 
         <div className="border-t border-border/30 pt-6 text-center">
           <p className="text-xs text-muted-foreground font-body">
-            © 2026 Aurum Café. All rights reserved. Crafted with passion.
+            © 2026 S&Z Cafe. All rights reserved. Crafted with passion.
           </p>
         </div>
       </div>

@@ -13,7 +13,7 @@ const testimonials = [
     stars: 5,
   },
   {
-    text: "I've traveled to 40+ countries for coffee. Aurum is the only café that made me stop searching. Their pour-over is transcendent.",
+    text: "I've traveled to 40+ countries for coffee. S&Z Cafe is the only café that made me stop searching. Their pour-over is transcendent.",
     author: "James K.",
     role: "Travel Journalist",
     stars: 5,
@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
         "
       </div>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4">
           What They <span className="text-gold-gradient">Say</span>
         </h2>
@@ -57,11 +57,11 @@ export default function TestimonialsSection() {
           Words from those who've tasted the difference
         </p>
 
-        <div ref={ref} className="grid md:grid-cols-3 gap-6">
+        <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="testimonial-card glass-card rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:glow-gold group relative"
+              className="testimonial-card glass-card rounded-2xl p-6 sm:p-8 transition-all duration-500 hover:-translate-y-2 hover:glow-gold group relative"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-5">

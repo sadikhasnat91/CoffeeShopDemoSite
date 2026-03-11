@@ -36,7 +36,7 @@ export default function CTASection() {
   }, []);
 
   return (
-    <section ref={ref} className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+    <section ref={ref} className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center overflow-hidden py-16 sm:py-0">
       {/* Background */}
       <img
         ref={imgRef}
@@ -46,7 +46,7 @@ export default function CTASection() {
       />
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
 
-      <div className="relative z-10 text-center px-6 max-w-2xl">
+      <div className="relative z-10 text-center px-6 sm:px-10 max-w-2xl">
         <h2 className="cta-anim font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
           Your Table <span className="text-gold-gradient">Awaits</span>
         </h2>

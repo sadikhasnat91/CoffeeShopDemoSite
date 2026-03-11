@@ -42,7 +42,7 @@ export default function GallerySection() {
 
   return (
     <section id="gallery" className="section-padding">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4">
           The <span className="text-gold-gradient">Gallery</span>
         </h2>
@@ -50,7 +50,7 @@ export default function GallerySection() {
           Moments captured in every cup
         </p>
 
-        <div ref={ref} className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+        <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           {galleryImages.map((img, i) => (
             <div
               key={i}
@@ -60,7 +60,7 @@ export default function GallerySection() {
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                className="w-full h-full object-cover min-h-[200px] transition-all duration-700 group-hover:scale-110 group-hover:brightness-75"
+                className="w-full h-full object-cover min-h-[180px] sm:min-h-[200px] transition-all duration-700 group-hover:scale-110 group-hover:brightness-75"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
                 <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">

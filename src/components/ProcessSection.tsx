@@ -60,7 +60,7 @@ export default function ProcessSection() {
       {/* Background line */}
       <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/20 to-transparent hidden md:block" />
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6">
           From Bean to <span className="text-gold-gradient">Cup</span>
         </h2>
@@ -82,7 +82,7 @@ export default function ProcessSection() {
                   <img
                     src={step.image}
                     alt={step.title}
-                    className="w-full h-[350px] md:h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-[250px] sm:h-[350px] md:h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>

@@ -27,10 +27,10 @@ export default function Navbar() {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-2 group">
           <Coffee className="w-7 h-7 text-primary transition-transform duration-300 group-hover:rotate-12" />
-          <span className="font-display text-xl font-bold text-gold-gradient">Aurum Café</span>
+          <span className="font-display text-xl font-bold text-gold-gradient">S&Z Cafe</span>
         </a>
 
         {/* Desktop */}
@@ -66,7 +66,7 @@ export default function Navbar() {
           mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-background/95 backdrop-blur-xl border-t border-border/50 px-6 py-4 space-y-3">
+        <div className="bg-background/95 backdrop-blur-xl border-t border-border/50 px-4 sm:px-6 py-4 space-y-1">
           {navItems.map((item) => (
             <button
               key={item}
