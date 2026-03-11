@@ -1,16 +1,22 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import latteImg from "@/assets/latte-art.jpg";
+import baristaImg from "@/assets/barista-pour.jpg";
+import beansImg from "@/assets/coffee-beans.jpg";
+import dessertImg from "@/assets/dessert.jpg";
+import cafeImg from "@/assets/cafe-interior.jpg";
+import heroImg from "@/assets/hero-coffee.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80", alt: "Latte art", span: "col-span-2 row-span-2" },
-  { src: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80", alt: "Coffee beans", span: "" },
-  { src: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80", alt: "Café interior", span: "" },
-  { src: "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&q=80", alt: "Espresso pour", span: "" },
-  { src: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&q=80", alt: "Pastries", span: "" },
-  { src: "https://images.unsplash.com/photo-1498804103079-a6351b050096?w=600&q=80", alt: "Brewing", span: "col-span-2" },
+  { src: latteImg, alt: "Latte Art Mastery", span: "col-span-2 row-span-2" },
+  { src: beansImg, alt: "Single Origin Beans", span: "" },
+  { src: cafeImg, alt: "Our Space", span: "" },
+  { src: baristaImg, alt: "Barista at Work", span: "" },
+  { src: dessertImg, alt: "Artisan Desserts", span: "" },
+  { src: heroImg, alt: "The Perfect Cup", span: "col-span-2" },
 ];
 
 export default function GallerySection() {
@@ -19,23 +25,28 @@ export default function GallerySection() {
   useEffect(() => {
     if (!ref.current) return;
     const imgs = ref.current.querySelectorAll(".gallery-item");
-    gsap.fromTo(
-      imgs,
-      { y: 60, opacity: 0, scale: 0.95 },
-      {
-        y: 0, opacity: 1, scale: 1, duration: 0.7, stagger: 0.12, ease: "power3.out",
-        scrollTrigger: { trigger: ref.current, start: "top 80%" },
-      }
-    );
+    imgs.forEach((img, i) => {
+      gsap.fromTo(
+        img,
+        { y: 80, opacity: 0, scale: 0.9 },
+        {
+          y: 0, opacity: 1, scale: 1, duration: 0.8, ease: "power3.out",
+          scrollTrigger: {
+            trigger: img,
+            start: "top 90%",
+          },
+        }
+      );
+    });
   }, []);
 
   return (
     <section id="gallery" className="section-padding">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-4">
+        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4">
           The <span className="text-gold-gradient">Gallery</span>
         </h2>
-        <p className="text-center text-muted-foreground font-body mb-12 max-w-md mx-auto">
+        <p className="text-center text-muted-foreground font-body mb-16 max-w-md mx-auto">
           Moments captured in every cup
         </p>
 
@@ -43,18 +54,21 @@ export default function GallerySection() {
           {galleryImages.map((img, i) => (
             <div
               key={i}
-              className={`gallery-item ${img.span} relative overflow-hidden rounded-xl group cursor-pointer`}
+              className={`gallery-item ${img.span} relative overflow-hidden rounded-2xl group cursor-pointer`}
             >
               <img
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                className="w-full h-full object-cover min-h-[200px] transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover min-h-[200px] transition-all duration-700 group-hover:scale-110 group-hover:brightness-75"
               />
-              <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-colors duration-500 flex items-end p-4">
-                <span className="text-foreground font-body text-sm opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                  {img.alt}
-                </span>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <span className="text-foreground font-display text-lg font-semibold drop-shadow-lg">
+                    {img.alt}
+                  </span>
+                  <div className="w-8 h-px bg-primary mx-auto mt-2" />
+                </div>
               </div>
             </div>
           ))}
